@@ -3,7 +3,7 @@ import { koa, rest, bodyParser, errorHandler, serveStatic } from '@feathersjs/ko
 import { eggContainer } from "./config/inversify.config";
 import { TYPES } from "./config/types";
 import { EggService } from "./services/EggService";
-import {ValidatorInterface} from "./validator/ValidatorInterface";
+import { ValidatorInterface } from "./validator/ValidatorInterface";
 
 const eggService = eggContainer.get<EggService>(TYPES.EggService);
 const eggValidator = eggContainer.get<ValidatorInterface>(TYPES.ValidatorInterface);

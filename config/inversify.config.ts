@@ -1,11 +1,11 @@
 import "reflect-metadata";
 import { Container } from "inversify"
 import { TYPES } from "./types";
+
 import { EggService } from "../services/EggService";
-import { EggMapper } from "../mapper/EggMapper";
-import { ValidatorInterface } from "../validator/ValidatorInterface";
-import { EggValidator } from "../validator/EggValidator";
-import { EggMapperInterface } from "../mapper/EggMapperInterface";
+import { EggValidator, ValidatorInterface } from "../validator";
+import { EggMapperInterface, EggMapper } from "../mapper";
+
 const eggContainer = new Container();
 
 eggContainer.bind<EggMapperInterface>(TYPES.EggMapperInterface).to(EggMapper);
